@@ -1,6 +1,14 @@
-# ARS Advocats - Website
+# ARS Advocat - Astro Site
 
-Modern, high-performance website for ARS Advocats built with Astro, Tailwind CSS, and TypeScript.
+Modern, premium website for ARS Advocats built with Astro, Tailwind CSS, and TypeScript.
+
+## 📖 Project Documentation & History
+For context on the project goals, tasks completed, and design decisions, please refer to:
+- [Project History](.agent/docs/history.md) - A log of all major improvements and changes.
+- [.agent/docs/](.agent/docs/) - Working artifacts including task lists and implementation plans.
+
+## 🚀 Deployment
+Script.
 
 ## 🚀 Quick Start
 

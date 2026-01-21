@@ -121,8 +121,11 @@ const socialLinks = [
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden pb-4">
-            <div class="flex flex-col space-y-4">
+        <div
+            id="mobile-menu"
+            class="md:hidden overflow-hidden max-h-0 transition-all duration-300 ease-in-out px-1"
+        >
+            <div class="flex flex-col space-y-4 pb-6 pt-2">
                 {
                     navItems.map((item) => (
                         <a
@@ -141,7 +144,7 @@ const socialLinks = [
 
                 <!-- Mobile Social Links -->
                 <div
-                    class="flex items-center space-x-4 pt-4 border-t border-gray-200"
+                    class="flex items-center space-x-4 pt-4 border-t border-gray-100"
                 >
                     {
                         socialLinks.map((social) => (
@@ -180,11 +183,28 @@ const socialLinks = [
 </nav>
 
 <script>
-    // Mobile menu toggle
+    // Mobile menu toggle logic
     const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
 
     mobileMenuButton?.addEventListener("click", () => {
-        mobileMenu?.classList.toggle("hidden");
+        if (mobileMenu) {
+            if (
+                mobileMenu.style.maxHeight &&
+                mobileMenu.style.maxHeight !== "0px"
+            ) {
+                mobileMenu.style.maxHeight = "0px";
+            } else {
+                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+            }
+        }
+    });
+
+    // Close menu when clicking on a link
+    const mobileLinks = mobileMenu?.querySelectorAll("a");
+    mobileLinks?.forEach((link) => {
+        link.addEventListener("click", () => {
+            if (mobileMenu) mobileMenu.style.maxHeight = "0px";
+        });
     });
 </script>

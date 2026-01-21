@@ -89,7 +89,11 @@ const especialitats = [
 >
     <Navbar />
 
-    <Hero title="ESPECIALITATS" subtitle="advocats" />
+    <Hero
+        title="ESPECIALITATS"
+        subtitle="advocats"
+        backgroundImage="/images/hero-especialitats.jpg"
+    />
 
     <section class="section-padding bg-white">
         <div class="container-custom max-w-5xl">
@@ -161,8 +165,10 @@ const especialitats = [
     }
 
     .specialty-card.active .item-icon,
-    .specialty-card.active .card-title {
-        color: var(--color-pink-white);
+    .specialty-card.active .card-title,
+    .specialty-card:hover .item-icon,
+    .specialty-card:hover .card-title {
+        color: var(--color-pink-white) !important;
     }
 
     .specialty-card.active .description-container {

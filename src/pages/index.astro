@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="ARS Advocats | Despatx d'advocats a Granollers">
+	<Navbar />
+
+	<!-- Hero/Splash Section -->
+	<main
+		class="min-h-screen flex items-center justify-center relative overflow-hidden"
+	>
+		<!-- Background with subtle pattern -->
+		<div class="absolute inset-0 bg-gradient-to-br from-gray-50 to-white">
+		</div>
+
+		<!-- Decorative architectural elements (subtle) -->
+		<div class="absolute inset-0 opacity-5">
+			<div
+				class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-primary to-transparent"
+			>
+			</div>
+			<div
+				class="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary to-transparent"
+			>
+			</div>
+		</div>
+
+		<!-- Content -->
+		<div class="relative z-10 container-custom text-center animate-fade-in">
+			<!-- Logo -->
+			<div class="mb-12">
+				<img
+					src="/images/logo.png"
+					alt="ARS Advocats"
+					class="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-lg"
+				/>
+			</div>
+
+			<!-- Tagline -->
+			<p
+				class="text-xl md:text-2xl text-secondary font-light mb-8 animate-slide-up"
+			>
+				Despatx d'advocats a Granollers
+			</p>
+
+			<!-- CTA Button -->
+			<a
+				href="/contacte"
+				class="btn-primary inline-block animate-slide-up"
+				style="animation-delay: 0.2s;"
+			>
+				Contacta'ns
+			</a>
+		</div>
+
+		<!-- Scroll indicator -->
+		<div
+			class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+		>
+			<svg
+				class="w-6 h-6 text-primary"
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+			</svg>
+		</div>
+	</main>
+
+	<Footer />
+</BaseLayout>

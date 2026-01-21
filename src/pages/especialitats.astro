@@ -113,7 +113,7 @@ const especialitats = [
                             <div class="card-inner bg-accent-grey hover:bg-primary transition-all duration-300 rounded-lg p-6 h-full flex flex-col items-center justify-center text-center shadow-md hover:shadow-lg">
                                 <div class="icon-container">
                                     <svg
-                                        class="w-12 h-12 mx-auto mb-4 text-primary group-hover:text-white transition-colors item-icon"
+                                        class="w-12 h-12 mx-auto mb-4 text-primary group-hover:text-pink-white transition-colors item-icon"
                                         fill="none"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
@@ -126,11 +126,11 @@ const especialitats = [
                                         />
                                     </svg>
                                 </div>
-                                <h3 class="card-title text-lg font-semibold text-secondary-dark group-hover:text-white transition-colors">
+                                <h3 class="card-title text-lg font-semibold text-secondary-dark group-hover:text-pink-white transition-colors">
                                     {especialitat.nom}
                                 </h3>
                                 <div class="description-container overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0 mt-0">
-                                    <p class="text-white text-sm mt-4 text-balance">
+                                    <p class="text-pink-white text-sm mt-4 text-balance">
                                         {especialitat.descripcio}
                                     </p>
                                 </div>
@@ -162,7 +162,7 @@ const especialitats = [
 
     .specialty-card.active .item-icon,
     .specialty-card.active .card-title {
-        color: white;
+        color: var(--color-pink-white);
     }
 
     .specialty-card.active .description-container {

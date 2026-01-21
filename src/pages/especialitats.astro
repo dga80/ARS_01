@@ -5,21 +5,81 @@ import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 
 const especialitats = [
-    "Dret Matrimonial",
-    "Dret de Família",
-    "Dret Laboral",
-    "Dret Penal",
-    "Dret Civil",
-    "Dret Mercantil",
-    "Dret Administratiu",
-    "Dret Fiscal",
-    "Dret Immobiliari",
-    "Dret d'Estrangeria",
-    "Dret de Successions",
-    "Reclamacions de Deutes",
-    "Dret Bancari",
-    "Dret del Consum",
-    "Dret de Societats",
+    {
+        nom: "Dret Matrimonial",
+        descripcio:
+            "Oferim assessorament integral en dret matrimonial: gestionem divorcis, convenis reguladors, custòdia de fills i liquidació de béns. Protegim els seus interessos amb professionalitat i empatia per assolir la millor solució jurídica.",
+    },
+    {
+        nom: "Dret de Família",
+        descripcio:
+            "Gestionem qüestions de filiació, adopcions, tuteles i incapacitacions. Acompanyem les famílies en moments de canvi, garantint la protecció dels menors i dels membres més vulnerables amb un tracte humà i personalitzat.",
+    },
+    {
+        nom: "Dret Laboral",
+        descripcio:
+            "Defensem els drets dels treballadors i assessorem empreses en acomiadaments, reclamacions de quantitat, expedients de regulació i seguretat social. Garantim el compliment de la normativa vigent amb rigor i eficàcia.",
+    },
+    {
+        nom: "Dret Penal",
+        descripcio:
+            "Donem assistència jurídica en tot tipus de procediments penals, des de delictes de trànsit fins a causes complexes. Defensem la seva llibertat i drets amb una estratègia processal sòlida i compromesa.",
+    },
+    {
+        nom: "Dret Civil",
+        descripcio:
+            "Assessorem en contractes, responsabilitat civil, reclamacions per danys i arrendaments. Resolem conflictes entre particulars cercant sempre la solució més favorable per als nostres clients, ja sigui via negociació o judicial.",
+    },
+    {
+        nom: "Dret Mercantil",
+        descripcio:
+            "Suport a l'empresa en la seva activitat diària: constitució de societats, contractació mercantil, fusions i processos concursals. Ajudem a minimitzar riscos jurídics per impulsar el creixement i estabilitat del seu negoci.",
+    },
+    {
+        nom: "Dret Administratiu",
+        descripcio:
+            "Gestionem recursos contra multes, procediments d'expropiació i reclamacions de responsabilitat patrimonial de l'Administració. Defensem els ciutadans davant l'actuació dels organismes públics amb solvència tècnica.",
+    },
+    {
+        nom: "Dret Fiscal",
+        descripcio:
+            "Planificació fiscal per a particulars i empreses per optimitzar la càrrega tributària. Resolem inspeccions d'hisenda i gestionem impostos amb un coneixement profund i actualitzat de la complexa normativa fiscal espanyola.",
+    },
+    {
+        nom: "Dret Immobiliari",
+        descripcio:
+            "Experts en compravendes, vicis de la construcció, comunitats de propietaris i desnonaments. Protegim la seva propietat i assegurem que qualsevol transacció immobiliària es realitzi amb total garantia jurídica i seguretat.",
+    },
+    {
+        nom: "Dret d'Estrangeria",
+        descripcio:
+            "Tramitació de permisos de residència, nacionalitat, reagrupació familiar i recursos contra denegacions. Facilitem els seus tràmits administratius amb celeritat per aconseguir la seva regularització i estabilitat al país.",
+    },
+    {
+        nom: "Dret de Successions",
+        descripcio:
+            "Assessorament en herències, testaments i declaracions d'hereus. Gestionem tot el procés successori de forma eficient, minimitzant els conflictes familiars i optimitzant el pagament de l'impost de successions.",
+    },
+    {
+        nom: "Reclamacions de Deutes",
+        descripcio:
+            "Recuperem els seus impagaments mitjançant procediments monitoris o ordinaris. Actuem amb rapidesa tant en fase extrajudicial com judicial per restablir la seva liquiditat i defensar els seus interessos econòmics legítims.",
+    },
+    {
+        nom: "Dret Bancari",
+        descripcio:
+            "Defensa davant clàusules abusives, sòl, despeses hipotecàries i interessos usuraris. Reclamem contra l'entitat bancària per recuperar els seus diners i restablir l'equilibri en la seva relació contractual amb el banc.",
+    },
+    {
+        nom: "Dret del Consum",
+        descripcio:
+            "Protegim el consumidor davant abusos de grans superfícies, companyies de serveis o compres defectuoses. Vetllem perquè es respectin els seus drets i rebi la compensació justa en qualsevol conflicte de consum.",
+    },
+    {
+        nom: "Dret de Societats",
+        descripcio:
+            "Redacció d'estatuts, pactes de socis i resolució de conflictes en l'organització interna de l'empresa. Assegurem que el funcionament dels òrgans de govern sigui correcte i respecti els drets de tots els socis.",
+    },
 ];
 ---
 
@@ -49,11 +109,11 @@ const especialitats = [
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     especialitats.map((especialitat) => (
-                        <div class="group">
-                            <div class="bg-accent-grey hover:bg-primary transition-colors duration-300 rounded-lg p-6 h-full flex items-center justify-center text-center shadow-md hover:shadow-lg">
-                                <div>
+                        <div class="specialty-card group cursor-pointer">
+                            <div class="card-inner bg-accent-grey hover:bg-primary transition-all duration-300 rounded-lg p-6 h-full flex flex-col items-center justify-center text-center shadow-md hover:shadow-lg">
+                                <div class="icon-container">
                                     <svg
-                                        class="w-12 h-12 mx-auto mb-4 text-primary group-hover:text-white transition-colors"
+                                        class="w-12 h-12 mx-auto mb-4 text-primary group-hover:text-white transition-colors item-icon"
                                         fill="none"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
@@ -65,9 +125,14 @@ const especialitats = [
                                             d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                                         />
                                     </svg>
-                                    <h3 class="text-lg font-semibold text-secondary-dark group-hover:text-white transition-colors">
-                                        {especialitat}
-                                    </h3>
+                                </div>
+                                <h3 class="card-title text-lg font-semibold text-secondary-dark group-hover:text-white transition-colors">
+                                    {especialitat.nom}
+                                </h3>
+                                <div class="description-container overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0 mt-0">
+                                    <p class="text-white text-sm mt-4 text-balance">
+                                        {especialitat.descripcio}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -89,3 +154,36 @@ const especialitats = [
 
     <Footer />
 </BaseLayout>
+
+<style>
+    .specialty-card.active .card-inner {
+        background-color: var(--color-primary);
+    }
+
+    .specialty-card.active .item-icon,
+    .specialty-card.active .card-title {
+        color: white;
+    }
+
+    .specialty-card.active .description-container {
+        max-height: 200px;
+        opacity: 1;
+        margin-top: 1rem;
+    }
+</style>
+
+<script>
+    const cards = document.querySelectorAll(".specialty-card");
+
+    cards.forEach((card) => {
+        card.addEventListener("click", () => {
+            // Close other cards
+            cards.forEach((c) => {
+                if (c !== card) c.classList.remove("active");
+            });
+
+            // Toggle current card
+            card.classList.toggle("active");
+        });
+    });
+</script>

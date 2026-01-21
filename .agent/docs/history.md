@@ -39,5 +39,23 @@ This document maintains a history of the major tasks, decisions, and refinements
 
 ---
 
+## 📅 January 21, 2026 (14:30) - Styling Optimization & Data Updates
+
+### 1. Hero Section UX
+- **Legibility**: Increased Hero title and subtitle font sizes. Set text color to translucent white (`white/95` and `white/80`) to ensure perfect contrast against the background overlay.
+- **Visuals**: Enhanced the Hero content box with a stronger backdrop blur (`backdrop-blur-md`) and a subtle white border to separate it from the background image.
+
+### 2. Branding & Navbar
+- **Consistency**: Changed Navbar background to solid pure white (`#FFFFFF`) to match the logo's background, ensuring a seamless visual integration. Removed backdrop blur from the navbar to maintain white color accuracy.
+
+### 3. Team Data & LinkedIn
+- **Alex Reus**: Updated LinkedIn profile to the correct URL.
+- **Anna Camps**: Temporarily deactivated the LinkedIn link as requested. Added logic to hide the LinkedIn icon when no URL is provided.
+
+### 4. Asset Fixes
+- **Images**: Re-synchronized hero images for all sections to ensure they load correctly across all environments.
+
+---
+
 ## How to use this history
 When cloning this repository on a new machine, refer to this file and the `.agent/docs` folder to understand the current state of the project and the rationale behind recent design choices.

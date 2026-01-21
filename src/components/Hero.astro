@@ -27,20 +27,20 @@ const {
     </div>
 
     <!-- Content -->
-    <div
-        class="relative z-10 container-custom text-center text-white animate-fade-in"
-    >
+    <div class="relative z-10 container-custom text-center animate-fade-in">
         <div
-            class="bg-primary/90 backdrop-blur-sm px-8 py-6 md:px-12 md:py-8 inline-block"
+            class="bg-primary/90 backdrop-blur-md px-10 py-8 md:px-16 md:py-12 inline-block shadow-2xl border border-white/10"
         >
             <h1
-                class="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider mb-2"
+                class="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-[0.2em] mb-4 text-white/95"
             >
                 {title}
             </h1>
             {
                 subtitle && (
-                    <p class="text-lg md:text-xl font-light">{subtitle}</p>
+                    <p class="text-xl md:text-2xl font-light tracking-[0.3em] text-white/80 italic">
+                        {subtitle}
+                    </p>
                 )
             }
         </div>
